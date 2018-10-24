@@ -1,0 +1,26 @@
+.accordion-section {
+  background-image: url("../img/accordion-bgr.jpg");
+  background-position: 0 12%;
+  box-shadow: 0 0 1000px rgba(0,0,0, .5) inset;
+  padding: 130px 0;
+  
+  &__heading {
+    @extend .paralax-section__heading;
+    @include make-lg-column-offset(3);
+    @include make-lg-column(6);
+    color: $accordionSectionFont;
+  }
+  
+  &__content-wrap {
+    @include make-row();
+    padding-top: 120px;
+  }
+  
+  &__accordion-wrap {
+    @include make-lg-column(6);
+    
+    &--spaced {
+      padding-top: 120px;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.partner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $partnersBorder;
+  padding-top: 42px;
+  transition: .1s;
+  
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0,0,0, 0.15) inset;
+    transition: .1s;
+  }
+  
+  &__logo {
+    width: 140px;
+    height: 34px;
+    overflow: hidden;
+    background-image: url("../img/partners.png");
+    margin-left: 12px;
+    
+    &--first {
+      background-position: 0 0;
+    }
+  
+    &--second {
+      background-position: -145px 0;
+    }
+  
+    &--third {
+      background-position: -290px 0;
+    }
+  
+    &--fourth {
+      background-position: -435px 0;
+    }
+  
+    &--fifth {
+      background-position: -580px 0;
+    }
+  
+    &--sixth {
+      background-position: -725px 0;
+    }
+  }
+}

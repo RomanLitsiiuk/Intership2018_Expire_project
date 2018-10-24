@@ -1,0 +1,20 @@
+.portfolio {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  
+  &__main-content {
+    @include make-lg-column(10);
+  }
+  
+  &__aside {
+    @include make-lg-column(2);
+  }
+  
+  &__articles {
+    width: 100%;
+  }
+  
+  &__author-text-wrap {
+    margin-bottom: 100px;
+  }
+}

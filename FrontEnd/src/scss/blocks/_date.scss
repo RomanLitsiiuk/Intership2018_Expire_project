@@ -1,0 +1,28 @@
+.date {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $dateColor;
+  font-family: 'Raleway-Regular';
+  line-height: 1.2;
+  font-size: 24px;
+  
+  &--post {
+    padding-top: 10px;
+  }
+  
+  &__first-row {
+    font-weight: bold;
+  }
+  
+  &__second-row {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  &__third-row {
+    font-size: 52px;
+    margin-top: -10px;
+  }
+}

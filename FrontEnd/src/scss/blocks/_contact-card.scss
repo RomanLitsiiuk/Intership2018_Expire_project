@@ -1,0 +1,30 @@
+.contact-card {
+  display: flex;
+  
+  &--padding {
+    padding-bottom: 60px;
+  }
+  
+  &__icon {
+    width: 80px;
+    font-size: 38px;
+    padding-top: 15px;
+    text-align: center;
+  }
+  
+  &__text {
+    font-family: 'Open Sans Regular';
+    line-height: 24px;
+    width: 270px;
+    padding-left: 25px;
+    
+    &--colored {
+      color: $asideLink;
+      padding-top: 30px;
+    }
+    
+    &--phone {
+      padding-top: 15px;
+    }
+  }
+}

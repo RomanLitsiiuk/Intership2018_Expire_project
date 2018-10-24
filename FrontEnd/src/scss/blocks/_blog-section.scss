@@ -1,0 +1,12 @@
+.blog-section {
+  padding-top: 100px;
+  @extend .clearfix;
+  
+  &__date-wrap {
+    @include make-lg-column(2);
+  }
+  
+  &__main-block {
+    @include make-lg-column(10);
+  }
+}

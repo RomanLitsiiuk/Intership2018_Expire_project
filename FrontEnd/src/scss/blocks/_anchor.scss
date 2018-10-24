@@ -1,0 +1,16 @@
+.anchor {
+  display: block;
+  position: absolute;
+  top: - 18px;
+  right: 160px;
+  font-size: 20px;
+  padding: 6px 10px;
+  background-color: $anchorBackground;
+  color: $pageBackgroundColor;
+  z-index: 5;
+  
+  &:hover {
+    text-decoration: none;
+    color: $asideLink;
+  }
+}

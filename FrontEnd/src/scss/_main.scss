@@ -1,0 +1,41 @@
+html,
+body {
+  height: 100%;
+}
+
+.main-markup {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  
+  &__content {
+    flex: 1 0 auto;
+  }
+  
+  &__footer {
+    flex: 0 0 auto;
+  }
+
+  &__blogs-wrap {
+    width: 100%;
+  }
+}
+
+div[class*='__container'] {
+  @extend .container;
+}
+
+div[class*='__row'] {
+  @include make-row();
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  display: block;
+}
+
+.clearfix::after {
+  content: '';
+  clear: both;
+}

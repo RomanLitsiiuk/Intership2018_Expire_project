@@ -1,0 +1,196 @@
+openapi: 3.0.0
+# Added by API Auto Mocking Plugin
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: ''
+info:
+  description: This is a simple API
+  version: "1.0.0"
+  title: Simple Inventory API
+  contact:
+    email: you@your-company.com
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Articles
+    description: Some list
+paths:
+  /api/list:
+    get:
+      tags:
+        - Articles
+      summary: searches article
+      operationId: searchArticle
+      description: search articles list
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+        '400':
+          description: bad input parameter
+    delete:
+      tags:
+        - Articles
+      summary: deletes all articles
+      operationId: deleteArticle
+      description: clean articles list
+      responses:
+        '200':
+          description: delete all articles
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+        '400':
+          description: bad input parameter
+  /api/list/{id}:
+    get:
+      tags:
+        - Articles
+      summary: searches article by id
+      operationId: searchArticleByID
+      parameters:
+       - name: id
+         in: path
+         description: ID of article to return
+         required: true
+         schema:
+            type: integer
+            format: int64
+      description: search article by ID
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+        '400':
+          description: bad input parameter
+    patch:
+      tags:
+        - Articles
+      summary: changes article by id
+      operationId: changeArticleByID
+      parameters:
+        - name: id
+          in: path
+          description: ID of article to change
+          required: true
+          schema:
+            type: integer
+            format: int64
+      description: change article by ID
+      responses:
+        '200':
+          description: one article changed
+        '400':
+          description: invalid input, object invalid
+        '404':
+          description: post not found
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DataToUpdate'
+        description: Article to patch
+    delete:
+      tags:
+        - Articles
+      summary: deletes article by id
+      operationId: deleteArticleByID
+      parameters:
+        - name: id
+          in: path
+          description: ID of article to return
+          required: true
+          schema:
+            type: integer
+            format: int64
+      description: delete article by ID
+      responses:
+        '200':
+          description: search results matching criteria
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Article'
+        '400':
+          description: bad input parameter
+  /api/create-article:
+    post:
+      tags:
+        - Articles
+      summary: add new article
+      operationId: addArticle
+      description: Add new article
+      responses:
+        '200':
+          description: item created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Article'
+        description: Article to add
+components:
+  schemas:
+    Article:
+      type: object
+      required:
+        - id
+        - author
+        - title
+        - date
+        - text
+      properties:
+        id:
+          type: number
+          example: 16
+        author:
+          type: string
+          example: Rimus
+        title:
+          type: string
+          example: Simple title
+        imageLink:
+          type: string
+          example: ../img/coffee.jpg
+        imageName:
+          type: string
+          example: coffee
+        label:
+          type: string
+          example: ti-image
+        description:
+          type: string
+          example: Lorem ipsum dolor sit amet
+        text:
+          type: object
+          example: {field1: Lorem ipsum dolor sit amet, field2: Nequeveniam in nobis nulla, blockquote: We are part of it}
+        date:
+          type: object
+          example: {year: 2014, month: November, day: 09}
+    DataToUpdate:
+      type: object
+      properties:
+        author:
+          type: string
+          example: Swagger
+        title:
+          type: string
+          example: Patched title

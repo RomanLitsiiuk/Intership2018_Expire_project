@@ -1,0 +1,25 @@
+.aside {
+  color: $asideFont;
+  
+  &__search-wrap {
+    padding-top: 20px;
+  }
+  
+  &__heading {
+    font-family: 'Raleway-SemiBold';
+    font-size: 24px;
+    color: $asideFont;
+    margin-top: 80px;
+  }
+  
+  &__categories-wrap {
+    padding-top: 20px;
+  }
+  
+  &__tags-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+}

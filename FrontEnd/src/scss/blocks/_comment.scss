@@ -1,0 +1,21 @@
+.comment {
+  display: flex;
+  justify-content: space-around;
+  
+  &__image {
+    padding-right: 10px;
+    font-size: 14px;
+    color: $sectionIconColor;
+  }
+  
+  &__text {
+    font-family: "Open Sans Regular";
+    font-weight: 600;
+    padding-right: 30px;
+
+    &--latest {
+      padding-right: 0;
+      font-weight: 100;
+    }
+  }
+}

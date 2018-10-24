@@ -1,0 +1,25 @@
+.latest-blog-wrap {
+  padding: 100px 0;
+
+  &__heading-wrap {
+    @include make-lg-column-offset(4);
+    @include make-lg-column(4);
+    padding-bottom: 40px;
+  }
+
+  &__text-wrap {
+    @include make-lg-column-offset(2);
+    @include make-lg-column(8);
+  }
+
+  &__text {
+    font-family: 'Open Sans Regular';
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  &__slider-wrap {
+    @include make-row();
+    padding-top: 100px;
+  }
+}

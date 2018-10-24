@@ -1,0 +1,60 @@
+.main-heading {
+  font-family: 'Raleway-SemiBold';
+  color: $headerFontColor;
+  font-size: 70px;
+  position: relative;
+
+  &--underlined {
+    @include underline(1px, $underlineBackground, -12px, 0, 105px, to left);
+    font-size: 45px;
+  }
+
+  &--underlined-header {
+    @include underline(1px, $underlineBackground, -12px, 0, 105px, to right);
+    font-size: 45px;
+  }
+  
+  &--about-us {
+    @include underline(1px, $underlineBackground, -12px, 0, 105px, to left);
+    font-size: 45px;
+    color: $blogHeadingColor;
+  }
+
+  &--latest-blog {
+    @include underline(1px, $underlineBackground, -18px, 135px, 105px, to left);
+    font-size: 44.9px;
+    color: $latestBlogFont;
+    text-align: center;
+  }
+  
+  &--post-small {
+    font-family: 'Raleway-Medium';
+    color: $blogHeadingColor;
+    font-size: 22px;
+  }
+  
+  &--home-page {
+    font-family: 'Raleway-Light';
+    font-size: 50px;
+  }
+  
+  &--post-large {
+    color: $blogHeadingColor;
+    font-size: 38px;
+    margin-bottom: 60px;
+  }
+  
+  &--article {
+    color: $blogHeadingColor;
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  
+  &--form {
+    @include make-lg-column(12);
+    @include underline(1px, $underlineBackground, -16px, 14px, 160px, to left);
+    color: $blogHeadingColor;
+    font-size: 42px;
+    margin: 60px 0;
+  }
+}

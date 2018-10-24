@@ -1,0 +1,36 @@
+.latest-portfolio {
+  @include cutPartOfBlockTop(30px, 49%, $latestPortfolioBorder, 1px, 53%, $pageBackgroundColor);
+  border-bottom: 1px solid $latestPortfolioBottom;
+  
+  &__main {
+    border-top: 1px solid $latestPortfolioBorder;
+    padding-top: 120px;
+  }
+  
+  &__heading-wrap {
+    @include make-lg-column-offset(4);
+    @include make-lg-column(4);
+    text-align: center;
+    padding-bottom: 115px;
+  }
+  
+  &__content-background {
+    background-color: $latestContentBackground;
+  }
+
+  &__content-wrap {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1px 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  &__button-wrap {
+    padding: 50px 0;
+    @include make-lg-column-offset(5);
+    @include make-lg-column(2);
+    padding-left: 28px;
+  }
+}

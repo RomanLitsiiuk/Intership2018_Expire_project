@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form page</title>
+</head>
+<body>
+  <div class="main-markup">
+    <div class="main-markup__content">
+      <header class="header header--secondary">
+        <div class="header__container">
+          <div class="header__row">
+            <figure class="logo">
+              <img class="logo__image" src="../img/logo.png" alt="logo">
+              <figcaption class="logo__description" id="top">Expire</figcaption>
+            </figure>
+            <nav class="header__navigation-wrap">
+              <ul class="navigation">
+                <li class="navigation__button">
+                  <a class="navigation__link" href="home.html">Home</a>
+                </li>
+                <li class="navigation__button">
+                  <a class="navigation__link" href="mvc/portfolio.html">Portfolio</a>
+                </li>
+                <li class="navigation__button">
+                  <a class="navigation__link" href="blog.html">Blog</a>
+                </li>
+                <li class="navigation__button">
+                  <a class="navigation__link" href="#">Pages</a>
+                </li>
+                <li class="navigation__button">
+                  <a class="navigation__link" href="#">About us</a>
+                </li>
+                <li class="navigation__button">
+                  <a class="navigation__link" href="#">Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="header__row">
+            <div class="header__heading-wrap">
+              <h1 class="main-heading main-heading--underlined-header">Post</h1>
+            </div>
+          </div>
+          <div class="header__row">
+            <p class="header__path">Home &nbsp;> &nbsp;Blog &nbsp;> &nbsp;Coffee is good, coffee is great</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-markup__container">
+          <div class="main-markup__row">
+            <h1 class="main-heading main-heading--form">Add a new post</h1>
+          </div>
+          <div class="main-markup__row">
+            <section class="post-form">
+              <form class="form form--creating" name="postCreating">
+                <label class="form__title" for="title">Enter the post title</label>
+                <div class="form__input-wrap">
+                  <input class="form__input" id="title" name="title" type="text" required="required" value="This is a new post">
+                  <div class="form__label"></div>
+                </div>
+                <label class="form__title" for="select">Select a post type</label>
+                <div class="form__input-wrap">
+                  <select class="form__select" id="select" name="label">
+                    <option value="ti-image">image</option>
+                    <option value="ti-video-clapper">video</option>
+                    <option value="ti-comment">text</option>
+                    <option value="ti-music-alt">audio</option>
+                  </select>
+                </div>
+                <label class="form__title" for="image">Enter an image name</label>
+                <div class="form__input-wrap form__input-wrap--margin">
+                  <input class="form__input" type="text" id="image" name="imageName" value="hills">
+                  <div class="form__label"></div>
+                </div>
+                <label class="form__title" for="url">Enter an image link</label>
+                <div class="form__input-wrap form__input-wrap--margin">
+                  <input class="form__input" type="text" id="url" name="imageLink" value="../img/newPost.jpg">
+                  <div class="form__label"></div>
+                </div>
+                <label class="form__title" for="text">Enter a text information</label>
+                <div class="form__input-wrap form__input-wrap--margin">
+                  <textarea class="form__input form__input--home-message" id="text" name="text"
+                            required="required" placeholder="mainText"></textarea>
+                  <div class="form__label form__label--home-message"></div>
+                </div>
+                <label class="form__title" for="author">Author name</label>
+                <div class="form__input-wrap form__input-wrap--margin form__input-wrap--author">
+                  <input class="form__input" id="author" name="author" type="text" required="required" value="By Roman">
+                  <div class="form__label"></div>
+                </div>
+                <label class="form__title" for="comments-count">Comments</label>
+                <div class="form__input-wrap form__input-wrap--margin form__input-wrap--count">
+                  <input class="form__input " type="number" id="comments-count" name="comments" placeholder="0"
+                         required="required" value="0">
+                  <div class="form__label"></div>
+                </div>
+                <button class="button button--form" id="formSubmit" name="createPost" type="submit">Accept</button>
+              </form>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div class="main-markup__footer">
+      <footer class="footer">
+        <a class="anchor" href="#top">
+          <span class="ti-angle-up"></span>
+        </a>
+        <div class="footer__border-top"></div>
+        <div class="footer__container">
+          <div class="footer__row">
+            <div class="footer__links-wrap">
+              <ul class="social-networks">
+                <li class="social-networks__list-item">
+                  <a class="social-networks__link" href="#">
+                    <span class="ti-facebook"></span>
+                  </a>
+                </li>
+                <li class="social-networks__list-item">
+                  <a class="social-networks__link" href="#">
+                    <span class="ti-twitter"></span>
+                  </a>
+                </li>
+                <li class="social-networks__list-item">
+                  <a class="social-networks__link" href="#">
+                    <span class="ti-linkedin"></span>
+                  </a>
+                </li>
+                <li class="social-networks__list-item">
+                  <a class="social-networks__link" href="#">
+                    <span class="ti-google"></span>
+                  </a>
+                </li>
+                <li class="social-networks__list-item">
+                  <a class="social-networks__link" href="#">
+                    <span class="ti-instagram"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <figure class="logo logo--vertical logo--footer">
+              <img src="../img/logo.png" alt="logo">
+              <figcaption class="logo__description logo__description--vertical">Expire</figcaption>
+            </figure>
+            <p class="footer__copyright">© Copryright 2014, design by dingo_design</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

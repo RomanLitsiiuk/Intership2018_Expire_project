@@ -1,0 +1,11 @@
+.map-wrap {
+  @include cutPartOfBlockTop(30px, 50%, transparent, 0, 50%, $pageBackgroundColor);
+  height: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  
+  &::before {
+    z-index: 5;
+  }
+}

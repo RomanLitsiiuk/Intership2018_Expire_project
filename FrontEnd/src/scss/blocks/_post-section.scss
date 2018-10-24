@@ -1,0 +1,16 @@
+.post-section {
+  padding-top: 100px;
+  @extend .clearfix;
+  
+  &__date-wrap {
+    @include make-lg-column(1);
+  }
+  
+  &__main-block {
+    @include make-lg-column(8);
+  }
+  
+  &__aside-wrap {
+    @include make-lg-column(3);
+  }
+}

@@ -1,0 +1,79 @@
+.pagination {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: flex;
+  box-sizing: border-box;
+  font-family: 'Raleway-SemiBold';
+  font-size: 22px;
+  
+  &--blog {
+    @include make-lg-column-offset(2);
+    @include make-lg-column(9);
+  }
+  
+  &--post {
+    padding-top: 50px;
+    justify-content: space-between;
+  }
+
+  &__page {
+    color: $paginationTextColor;
+    text-transform: uppercase;
+    display: block;
+    width: 45px;
+    height: 45px;
+    border: 1px solid $blogSectionBorder;
+    background: $blogButtonBackground;
+    margin-right: 26px;
+    text-align: center;
+    padding-top: 4px;
+    transition: color .1s ease-in;
+    
+    &:hover {
+      cursor: pointer;
+      color: $blogButtonColor;
+      text-decoration: none;
+      transition: color .1s ease-in;
+    }
+  }
+
+  &__button {
+    @extend .pagination__page;
+    transition: width .15s ease-in;
+    font-weight: bold;
+    position: relative;
+    font-size: 16px;
+    margin-right: 0;
+
+    &:hover {
+      width: 143px;
+      transition: width .15s ease-in;
+
+      &>.pagination__button-hover-text {
+        color: $blogButtonColor;
+        visibility: visible;
+        transition: visibility .16s linear;
+        transition-delay: .2s;
+        font-size: 16px;
+      }
+
+      &>.pagination__button-arrow {
+        visibility: hidden;
+        color: transparent;
+      }
+    }
+  }
+
+  &__button-arrow {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transition: color .1s ease-in;
+    transition-delay: .12s;
+  }
+
+  &__button-hover-text {
+    visibility: hidden;
+    font-size: 2px;
+  }
+}

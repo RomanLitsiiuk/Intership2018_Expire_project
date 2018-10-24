@@ -1,0 +1,46 @@
+.contacts {
+  padding: 100px 0;
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: calc(50% - 15px);
+    height: 30px;
+    background-color: $pageBackgroundColor;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: - 30px;
+    left: calc(50% - 15px);
+    border: 15px solid transparent;
+    border-bottom: 15px solid $pageBackgroundColor;
+    border-left: 15px solid $pageBackgroundColor;
+  }
+  
+  &__heading-container {
+    @include make-lg-column(12);
+  }
+
+  &__text {
+    @extend .about-us__under-heading-text;
+  }
+  
+  &__info-column {
+    @include make-lg-column(4);
+    display: flex;
+    flex-direction: column;
+    color: $contactFont;
+  }
+  
+  &__form-column {
+    @include make-lg-column(8);
+    color: $contactFont;
+  }
+}

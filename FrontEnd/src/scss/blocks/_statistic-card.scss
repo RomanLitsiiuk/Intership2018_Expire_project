@@ -1,0 +1,21 @@
+.statistic-card {
+  color: $statisticsFontColor;
+
+  &__icon {
+    font-size: 45px;
+    @include make-lg-column(1);
+    text-align: right;
+  }
+
+  &__amount {
+    @include make-lg-column(2);
+    font-family: 'Raleway-Regular';
+    font-size: 40px;
+  }
+
+  &__name {
+    font-family: 'Raleway-Light';
+    font-size: 25px;
+    padding-top: 22px;
+  }
+}

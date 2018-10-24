@@ -1,0 +1,169 @@
+//Bottom left block cut (header)
+@mixin cutPartOfBlockBottom($width, $cutHeight, $color) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: calc(#{$width} - #{$cutHeight / 2});
+    height: $cutHeight;
+    background: $color;
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: calc(#{$width} - #{$cutHeight / 2});
+    bottom: 0;
+    width: $cutHeight;
+    height: $cutHeight;
+    background: linear-gradient(to top right, $color 50%, transparent 0);
+  }
+}
+
+//Top right bordered cut (cornerBorderWidth in % after 50%)
+@mixin cutPartOfBlockTop($cutHeight, $width, $borderColor, $borderWidth, $cornerBorderWidth, $cutColor) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: $width;
+    height: $cutHeight;
+    background: $cutColor;
+    border-bottom: $borderWidth solid $borderColor;
+    box-sizing: border-box;
+  }
+  
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: $width;
+    top: 0;
+    width: $cutHeight;
+    height: $cutHeight;
+    background: linear-gradient(to top right, transparent 50%, $borderColor 50%, $borderColor $cornerBorderWidth, $cutColor 0);
+    box-sizing: border-box;
+  }
+}
+
+//Top right block add
+@mixin topRigtAddition ($width, $cutHeight, $color){
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: - $cutHeight;
+    width: $width;
+    height: $cutHeight;
+    background-color: $color;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: - $cutHeight;
+    right: $width;
+    border: $cutHeight/2 solid transparent;
+    border-bottom: $cutHeight/2 solid $color;
+    border-right: $cutHeight/2 solid $color;
+  }
+}
+
+//Top bottom block add
+@mixin bottomRigtAddition ($width, $cutHeight, $color){
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: - $cutHeight;
+    z-index: 2;
+    width: calc(#{$width} - #{$cutHeight / 2});
+    height: $cutHeight;
+    background-color: $color;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: - $cutHeight;
+    right: calc(#{$width} - #{$cutHeight / 2});
+    border: $cutHeight/2 solid transparent;
+    border-top: $cutHeight/2 solid $color;
+    border-right: $cutHeight/2 solid $color;
+    z-index: 2;
+  }
+}
+
+//Blog label size and position
+@mixin label($cutHeight, $cutPosition, $ImageSize, $labelColor) {
+  position: absolute;
+  box-sizing: border-box;
+  height: calc(#{$cutHeight} - 1px);
+  top: 0;
+  left: calc(100% + .5px - #{$cutPosition});
+  background-color: $labelColor;
+  padding-top: calc((#{$cutHeight} - #{$ImageSize} - 1px) / 2);
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    z-index: 2;
+    border: $labelSize solid transparent;
+  }
+
+  &::before {
+    left: - $cutHeight + 1px;
+    border-top: $labelSize solid $labelColor;
+    border-right: $labelSize solid $labelColor;
+  }
+
+  &::after {
+    right: - $cutHeight + 1px;
+    border-bottom: $labelSize solid $labelColor;
+    border-left: $labelSize solid $labelColor;
+  }
+}
+
+//Animated underline (navigation)
+@mixin underline ($lineHeight, $color, $bottomPosition, $leftPosition, $width, $direction) {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: $bottomPosition;
+    left: $leftPosition;
+    display: inline-block;
+    width: $width;
+    height: $lineHeight;
+    background-color: $color;
+    background-image: linear-gradient($direction, rgba(0,0,0, .5), $color);
+  }
+}
+
+//Gradient border
+@mixin border($color) {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(to top, $color, transparent);
+  z-index: -1;
+}

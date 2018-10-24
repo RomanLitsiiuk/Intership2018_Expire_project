@@ -1,0 +1,14 @@
+.tag {
+  padding: 8px 18px;
+  border: 1px solid $asideButtonBorder;
+  color: $asideButton;
+  margin: 0 5px 5px 0;
+  box-sizing: border-box;
+  
+  &:hover {
+    text-decoration: none;
+    background-color: $asideLink;
+    color: $pageBackgroundColor;
+    border-color: $asideLink;
+  }
+}

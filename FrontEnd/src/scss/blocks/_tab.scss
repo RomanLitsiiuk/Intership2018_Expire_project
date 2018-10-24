@@ -1,0 +1,76 @@
+.tab {
+  padding-right: 1px;
+  padding-bottom: 1px;
+  width: 160px;
+  position: relative;
+  
+  &--active {
+    &> .tab__button {
+      background-color: darken($blogButtonColor, 20%);
+    }
+    
+    &> .tab__content {
+      height: auto;
+      z-index: 1;
+      
+      &> .tab__name {
+        font-size: 14px;
+        padding: 5px 10px;
+        border-bottom: 1px solid $blogButtonColor;
+        color: $asideFont;
+        transition: color 0.5s;
+      }
+    }
+  }
+  
+  &__button {
+    height: 40px;
+    background-color: $blogButtonColor;
+    color: $headerFontColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &--aside {
+      width: 100%;
+    }
+    
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0 0 20px 2px rgba(0,0,0, 0.2) inset;
+    }
+  }
+  
+  &__header {
+    font-family: 'Raleway-SemiBold';
+    font-size: 18px;
+  }
+  
+  &__content {
+    width: 100%;
+    height: 0;
+    background-color: $pageBackgroundColor;
+    
+    &--main {
+      position: absolute;
+      left: 0;
+      top: 100%;
+    }
+  }
+  
+  &__name {
+    font-family: Raleway-SemiBold;
+    font-size: 0;
+    transition: color 0.5s;
+    color: transparent;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: lighten($blogButtonColor, 30%);
+    }
+    
+    &--active {
+      background-color: lighten($blogButtonColor, 35%);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+.post-form {
+  @include make-lg-column(12);
+  padding-top: 20px;
+  padding-bottom: 100px;
+}

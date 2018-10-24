@@ -1,0 +1,46 @@
+.header-button {
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Raleway-SemiBold';
+  position: relative;
+  width: 148px;
+  height: 48px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  border: 1px solid $blogButtonBackground;
+  
+  &:hover {
+    background-color: $blogButtonColor;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, .6), $blogButtonColor);
+    border: none;
+  }
+  
+  &:hover > .header-button__link {
+    padding-top: 13px;
+    cursor: pointer;
+    text-decoration: none;
+    color: $blogButtonBackground;
+    background-color: $blogButtonColor;
+  }
+  
+  &__link {
+    z-index: 5;
+    position: absolute;
+    display: block;
+    left: 1px;
+    top: 1px;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    background-color: transparent;
+    font-size: 16px;
+    padding-top: 12px;
+    text-align: center;
+    color: $blogButtonBackground;
+
+    &--post {
+      color: $blogButtonColor;
+      border: none;
+      font-family: 'Raleway SemiBold';
+    }
+  }
+}

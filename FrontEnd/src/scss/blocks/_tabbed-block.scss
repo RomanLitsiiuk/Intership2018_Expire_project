@@ -1,0 +1,78 @@
+.tabbed-block {
+  width: 100%;
+  background-color: $pageBackgroundColor;
+  position: relative;
+  border-right: 1px solid $blogSectionBorder;
+  border-bottom: 1px solid $blogSectionBorder;
+  
+  &__image-wrap {
+    @include cutPartOfBlockTop(8px, 40%, $postIconBorder, 1px, 60%, $pageBackgroundColor);
+    width: 82px;
+    height: 82px;
+    flex-shrink: 0;
+    position: relative;
+    left: 28px;
+    top: -10px;
+  }
+  
+  &__image {
+    width: 100%;
+    border: 1px solid $postIconBorder;
+  }
+  
+  &__text-wrap {
+    padding: 20px 30px 20px 60px;
+    color: $blogHeadingColor;
+  }
+  
+  &__name {
+    font-family: 'Raleway-SemiBold';
+    font-size: 24px;
+  }
+  
+  &__position {
+    font-family: 'Raleway-Medium';
+    font-size: 14px;
+    color: $asideLink;
+  }
+  
+  &__text {
+    font-family: 'Open Sans Italic';
+    font-size: 15px;
+    padding-top: 16px;
+    line-height: 30px;
+  }
+  
+  &__tabs-wrap {
+    width: 100%;
+    margin-top: -34px;
+    padding-bottom: 27px;
+    padding-left: 140px;
+    display: flex;
+  }
+  
+  &__radio {
+    position: absolute;
+    width: 21px;
+    height: 21px;
+    visibility: hidden;
+    
+    &:checked + .tabbed-block__label {
+      background-color: $asideLink;
+    }
+  }
+  
+  &__label {
+    display: block;
+    width: 21px;
+    height: 21px;
+    border: 1px solid $accordionRadioBorder;
+    background-color: transparent;
+    margin-right: 15px;
+    
+    &:hover {
+      cursor: pointer;
+      background-color: $asideLink;
+    }
+  }
+}

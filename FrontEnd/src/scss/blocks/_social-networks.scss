@@ -1,0 +1,31 @@
+.social-networks {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 58px;
+  padding-left: 5px;
+  font-size: 22px;
+  
+  &--post {
+    width: 205px;
+    padding-top: 40px;
+    padding-left: 0;
+    
+    &>.social-networks__link:hover {
+      color: $socialNetworkHover;
+    }
+  }
+  
+  &__list-item {
+    list-style-type: none;
+  }
+
+  &__link {
+    color: inherit;
+  
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      color: $footerIconColor;
+    }
+  }
+}

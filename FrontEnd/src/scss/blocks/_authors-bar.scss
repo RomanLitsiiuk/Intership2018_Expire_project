@@ -1,0 +1,12 @@
+.authors-bar {
+  display: flex;
+  
+  &--primary {
+    flex-direction: row;
+    margin-bottom: 160px;
+  }
+  
+  &--secondary {
+    flex-direction: column;
+  }
+}

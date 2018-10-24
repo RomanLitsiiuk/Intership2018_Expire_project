@@ -1,0 +1,44 @@
+.navigation {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  
+  &__button {
+    @include underline(1px, $underlineBackground, 0, 0, 100%, to right);
+    transition: width .2s ease-in-out;
+    
+    &::after {
+      width: 0;
+      transition: width .2s ease-in-out;
+    }
+  
+    &:hover {
+      cursor: pointer;
+    
+      &::after {
+        width: 100%;
+        transition: width .2s ease-in-out;
+      }
+    }
+  }
+  
+  &__link {
+    display: block;
+    padding: 10px;
+    font-family: 'Raleway-Light';
+    color: $headerFontColor;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+    &:hover {
+      text-decoration: none;
+      color: $headerFontColor;
+    }
+  
+    &:visited,
+    &:active {
+      text-decoration: none;
+      color: $headerFontColor;
+    }
+  }
+}

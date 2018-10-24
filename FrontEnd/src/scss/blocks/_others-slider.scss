@@ -1,0 +1,53 @@
+.others-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -27px;
+  
+  &__tape {
+    padding-top: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    top: -54px;
+  }
+  
+  &__slides-wrap {
+    height: 100%;
+    width: 9999px;
+    left: 0;
+    top: 0;
+    display: flex;
+    position: relative;
+    
+    &:hover {
+      cursor: move;
+    }
+  }
+  
+  &__slide {
+    display: flex;
+    max-width: 570px;
+    transition: left 1s;
+  }
+  
+  &__points-wrap {
+    display: flex;
+    justify-content: center;
+    
+  }
+  
+  &__point {
+    box-sizing: border-box;
+    width: 22px;
+    height: 22px;
+    background-color: transparent;
+    border: 1px solid $accordionRadioBorder;
+    margin-right: 15px;
+    cursor: pointer;
+  
+    &--active {
+      background-color: $asideLink;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.related-post {
+  @include make-row();
+  position: relative;
+  padding: 50px 0 100px;
+  
+  &__arrow {
+    position: absolute;
+    font-size: 48px;
+    top: 38%;
+    
+    &:hover {
+      cursor: pointer;
+      color: $blogButtonColor;
+    }
+    
+    &--left {
+      left: -50px;
+    }
+    
+    &--right {
+      right: -50px;
+    }
+  }
+  
+  &__page-wrap {
+    @include make-lg-column(6);
+  }
+}

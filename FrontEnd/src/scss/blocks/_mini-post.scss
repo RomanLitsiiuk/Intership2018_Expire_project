@@ -1,0 +1,47 @@
+.mini-post {
+  padding-top: 40px;
+  @include make-row();
+  
+  &__icon-wrap {
+    @include make-lg-column(2);
+    @include cutPartOfBlockTop(8px, 40%, $postIconBorder, 1px, 60%, $pageBackgroundColor);
+    padding-right: 0;
+    
+    &--even {
+      @include make-lg-column-offset(2);
+    }
+  }
+  
+  &__icon {
+    border: 1px solid $postIconBorder;
+    width: 100%;
+  }
+  
+  &__text-wrap {
+    @include make-lg-column(10);
+  
+    &--even {
+      @include make-lg-column(8);
+    }
+  }
+  
+  &__heding {
+    font-family: 'Raleway-SemiBold';
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  &__text {
+    padding: 25px 0 25px;
+  }
+  
+  &__answer {
+    display: inline-block;
+    padding: 10px;
+    color: $sectionIconColor;
+    
+    &:hover {
+      color: $sectionIconColor;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.category {
+  width: 100%;
+  margin-left: 20px;
+  padding: 7px 0 5px;
+  border-bottom: 1px solid $categoryUnderline;
+  position: relative;
+  
+  &__link {
+    display: inline-block;
+    color: inherit;
+    padding: 5px 0;
+    
+    &:hover {
+      text-decoration: none;
+      color: $asideLink;
+    }
+  }
+  
+  &__arrow {
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    color: $asideLink;
+  }
+}

@@ -1,0 +1,35 @@
+.figured-block {
+  width: 100%;
+  @include cutPartOfBlockTop($sectionCutHeight, $sectionCutPosition, $blogSectionBorder, 1px, 51.5%, $pageBackgroundColor);
+
+  &--latest {
+    @include cutPartOfBlockTop(36px, $sectionCutPosition, $blogSectionBorder, 1px, 53%, $pageBackgroundColor);
+  }
+  
+  &__content {
+    width: 100%;
+    border: 1px solid $blogSectionBorder;
+    border-bottom: none;
+  
+    &--empty {
+      padding-top: 40px;
+    }
+  }
+  
+  &__label {
+    @include label($sectionCutHeight, $sectionCutPosition, $labelImageSize, $sectionBlockLabel);
+  }
+  
+  &__label-icon {
+    font-size: $labelImageSize;
+    height: $labelImageSize;
+    color: $labelImgColor;
+    line-height: $labelImageSize;
+  }
+  
+  &__music {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

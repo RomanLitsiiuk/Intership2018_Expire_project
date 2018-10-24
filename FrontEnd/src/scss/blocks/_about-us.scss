@@ -1,0 +1,44 @@
+.about-us {
+  padding: 100px 0;
+  background-color: $pageBackgroundColor;
+  position: relative;
+  @include  bottomRigtAddition (50%, 30px, $pageBackgroundColor);
+  
+  &__heading-wrap {
+    @include make-row();
+    @include make-lg-column(12);
+  }
+  
+  &__under-heading-text {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+  
+  &__column-wrap {
+    @include make-lg-column(3);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  &__text {
+    font-size: 28px;
+    padding-bottom: 60px;
+  }
+  
+  &__button {
+    display: inline-block;
+    font-family: 'Raleway-SemiBold';
+    font-size: 16px;
+    padding: 15px 20px;
+    background-color: $aboutUsButton;
+    color: $pageBackgroundColor;
+    text-transform: uppercase;
+    
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      color: $pageBackgroundColor;
+      box-shadow: 0 0 15px rgba(255,255,255, .8) inset;
+    }
+  }
+}

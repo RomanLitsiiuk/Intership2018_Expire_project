@@ -1,0 +1,27 @@
+.service-block {
+  @include cutPartOfBlockTop(27px, 45%, $serviceBlockBorder, 1px, 53.5%, $pageBackgroundColor);
+  
+  &__content {
+    border: 1px solid $serviceBlockBorder;
+    padding: 30px 20px;
+  }
+  
+  &__heading {
+    display: inline-block;
+    color: $serviceblockHeading;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  &__symbol {
+    display: inline-block;
+    color: $serviceBlockSymbol;
+    font-size: 38px;
+    padding-right: 20px;
+  }
+  
+  &__text {
+    padding: 12px 5px 5px;
+  }
+}
