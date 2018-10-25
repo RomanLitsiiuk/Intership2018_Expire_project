@@ -238,6 +238,7 @@ function createAside(object) {
 }
 
 function createPost(post) {
+  console.log(post);
   const postFragment = document.createDocumentFragment();
   const rowWithPost = createTag('div', 'main-markup__row');
   const postWrap = createTag('section', 'post-section');
@@ -339,15 +340,15 @@ function getPost(data) {
 }
 
 function renderPost(url) {
-  return new Promise(function (resolve) {
+  return new Promise((resolve) => {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
+    xhr.send();
     xhr.onreadystatechange = function () {
       if (xhr.status === 200 && xhr.readyState === 4) {
         resolve(this.response);
       }
     };
-    xhr.send();
   });
 }
 
